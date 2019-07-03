@@ -7,7 +7,7 @@ public class BoggleGame {
 	
 	public BoggleGame(String input) {
 		board = buildBoard(input);
-		// initialize solver when ready
+		solver = new GeneratePossibleWordSolver();
 	}
 	
 	private Board buildBoard(String input) {
@@ -54,11 +54,4 @@ public class BoggleGame {
 		}
 		System.out.println();
 	}
-	
-	
-	public static void main(String[] args) {
-		
-		new BoggleGame(args[0]).solve();
-	}
-
 }
